@@ -15,4 +15,11 @@ public class Querries implements GraphQLRootResolver {
     public List<RendezVous> getallrendezVous(){
         return this.rendezVousRepository.getListeRendezVous();
     }
+    public List<RendezVous> getRendezVousByLogementRef(int refLog) {
+        return rendezVousRepository.getListeRendezVousByLogementRef(refLog);
+    }
+    public RendezVous getRendezVousById(int id) {
+        return rendezVousRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Rendez-vous non trouvé avec l'identifiant : " + id));
+    }
 }

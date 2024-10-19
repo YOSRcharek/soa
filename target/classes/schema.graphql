@@ -20,9 +20,20 @@ type RendezVous {
     logement : Logement
     numTel :String
 }
+type Mutation {
+    createRendezVous(id: Int, date: String, heure: String, refLog: Int, numTel: String): RendezVous
+    updateRendezVous(id: Int, date: String, heure: String, numTel: String): Boolean
+    deleteRendezVous(id: Int): Boolean
+}
+
 type Querries {
-    getallrendezVous:[RendezVous]
+    getallrendezVous: [RendezVous]
+    getRendezVousByLogementRef(refLog: Int): [RendezVous]
+    getRendezVousById(id: Int): RendezVous
 }
+
 schema {
-    query:Querries
+    query: Querries
+    mutation: Mutation
 }
+
