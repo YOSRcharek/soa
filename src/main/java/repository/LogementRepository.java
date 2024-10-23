@@ -18,6 +18,7 @@ public class LogementRepository {
 		logements.add(new Logement(4,"78, Rue des Oranges", "Bardo","Tunis",Type.EtageVilla,"chauffage central, ascenseur, climatisation",400f));
 	 }
 
+
     public List<Logement> getAllLogements() {
         return logements;
     }

@@ -11,6 +11,9 @@ public class Logement {
 	private String description;
 	private float prix;
 
+	public Logement(int reference, String adresse) {
+	}
+
 	public enum Type {Studio, Appartement, Villa, EtageVilla} ;
 
 	public Logement() {

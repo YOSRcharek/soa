@@ -24,10 +24,14 @@ type Mutation {
     createRendezVous(id: Int, date: String, heure: String, refLog: Int, numTel: String): RendezVous
     updateRendezVous(id: Int, date: String, heure: String, numTel: String): Boolean
     deleteRendezVous(id: Int): Boolean
+    createLogement(reference :Int , adresse:String):Logement
 }
 
 type Querries {
     getallrendezVous: [RendezVous]
+    getallLogement:[Logement]
+    getLogementByRef(reference:Int):Logement
+    getLogementByType(type:Type):[Logement]
     getRendezVousByLogementRef(refLog: Int): [RendezVous]
     getRendezVousById(id: Int): RendezVous
 }
